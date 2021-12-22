@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<scenarios>
+    <scenario name="IntersectionScenarioZ_11" type="IntersectionScenarioZ_11" town="Town03">
+        <ego_vehicle x="-74.32" y="-50" z="0.5" yaw="270" model="vehicle.lincoln.mkz2017" />
+        <other_actor x="-105" y="-136" z="0.5" yaw="0" model="vehicle.tesla.model3" />
+    </scenario>
+</scenarios>
+
+<!-- This is a comment -->
+<!--
+	we will add possible start and end locations for ego and other adv vehicle here along with yaw angle
+	Possible start locations for the ego and other vehicle are as follows:
+	after the scenario there will be these intersection header with ego and other vehicle positions under them
+
+	Intersection Leg1
+		ego_vehicle x="-74.32" y="-50" z="0.5" yaw="270" model="vehicle.lincoln.mkz2017"
+		other_actor x="-105" y="-136" z="0.5" yaw="0" model="vehicle.tesla.model3"
+
+	Intersection Leg2
+		egovehile x="-74.32" y="-50" z="0.5" yaw="0" model="vehicle.lincoln.mkz2017"
+		other_actor x="-105" y="-136" z="0.5" yaw="0" model="vehicle.tesla.model3"
+
+	Intersection Leg3
+	egovehile x="-74.32 (add 5 more in -ve or +ve, whatever is req)" y="-50" z="0.5" yaw="90" model="vehicle.lincoln.mkz2017"
+
+	Intersection Leg4
+	egovehile x="-74.32 (add 5 more in -ve or +ve, whatever is req)" y="-50" z="0.5" yaw="180" model="vehicle.lincoln.mkz2017"
+
+ -->

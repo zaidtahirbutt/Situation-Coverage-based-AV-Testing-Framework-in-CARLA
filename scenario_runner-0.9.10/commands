@@ -1,0 +1,46 @@
+• python scenario_runnerZ2.py --scenario IntersectionScenarioZ_1 --debug --output
+• python scenario_runnerZ.py --route srunner/data/routes_debug.xml srunner/data/all_towns_traffic_scenarios1_3_4.json 0 --agent srunner/autoagents/npc_agent.py --debug
+• python scenario_runnerZ.py --route srunner/data/routes_debug.xml srunner/data/all_towns_traffic_scenarios1_3_4.json 0 --agent srunner/autoagents/human_agent.py
+• python automatic_control_agent_z.py (in scenario runner folder)
+• python manual_control.py (in scenario runner folder)
+• python scenario_runnerZ2.py --scenario IntersectionScenarioZ_2 --show_int_wps --show_int_wp_locs
+• python scenario_runnerZ3.py --scenario IntersectionScenarioZ_3 --show_int_wps --show_int_wp_locs (Z3 is experimental)
+• python scenario_runnerZ4.py --scenario IntersectionScenarioZ_3 --show_int_wps --show_int_wp_locs (Z4 is experimental) (works 1 March 2021)
+• python scenario_runnerZ2.py --scenario IntersectionScenarioZ_3 --show_int_wps --show_int_wp_locs (after making changes in IntersectionScenarioZ_3, run with valid scenario_runner file scenario_runnerZ2.py) (for investigating trigger locations)
+• python scenario_runnerZ5.py --scenario IntersectionScenarioZ_3 --show_int_wps --show_int_wp_locs (Z5 is experimental, RUNS! 4 March21)
+• python scenario_runnerZ6.py --scenario IntersectionScenarioZ_3 --show_int_wps --show_int_wp_locs  (Z6 is experimental, works! 5March21) (sys exits I believe after showing IntersectionSituations runs)
+• python scenario_runnerZ7.py --scenario IntersectionScenarioZ_3 --show_int_wps --show_int_wp_locs (experimental)
+• python scenario_runnerZ7.py --scenario IntersectionScenarioZ_4 --show_int_wps --show_int_wp_locs (experimental, Runs, Fixed trigger drawing bugs)
+• python scenario_runnerZ7.py --scenario IntersectionScenarioZ_4 --show_int_wps --show_int_wp_locs --debug (experimental, Runs, Fixed trigger drawing bugs, 9March21)
+• python scenario_runnerZ2b.py --scenario IntersectionScenarioZ_2 --show_int_wps --show_int_wp_locs (After making scenario_manager2 to scenario_manager)
+• python scenario_runnerZ2b.py --scenario IntersectionScenarioZ_2 --show_int_wps --show_int_wp_locs (experimental, After making scenario_manager to scenario_manager2 with the egoAgentZ used in it, once with self.viusalization=True and then False, RUNS!! 11March21)
+• python scenario_runnerZ8.py --scenario IntersectionScenarioZ_4 --show_int_wps --show_int_wp_locs (Works! 11 March21. Fixed ego end_conditionTrigger locs)
+• python scenario_runnerZ8.py --scenario IntersectionScenarioZ_4 --show_int_wps --not_visualize (works! --not_visualize to not visualize, 11March21) 
+• python scenario_runnerZ8.py --scenario IntersectionScenarioZ_4 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 1 (11 March, Exp, Not working with seed)
+• python scenario_runnerZ8.py --scenario IntersectionScenarioZ_4 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 1 (Wroks with Seed!! Same random results 17 March!)
+• python scenario_runnerZ9.py --scenario IntersectionScenarioZ_4 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 1 (runs but automatic_ego_controller_z3 goes out of bounds due to ego vehicle overshooting the waypoints, making new files with reduced ego veh speed at intersection)
+• python scenario_runnerZ10.py --scenario IntersectionScenarioZ_4 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 1 (Runs, 17March21, need to fix destination points and ego speed)
+• python scenario_runnerZ10.py --scenario IntersectionScenarioZ_4 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 1 --show_int_wp_locs  (to show the wp_locs along with everything else, WORKED, for debugging the out of deque index prob, the planner was stopping 20 meters before goal location anyway!!!!!!!!!!!!!!!! 18March21)
+• python scenario_runnerZ2.py --scenario IntersectionScenarioZ_3b --show_int_wps --show_int_wp_locs  (Just to see the drawn ego end condition trigger locations of all three intersection legs, awesomely!!!!)
+• python scenario_runnerZ11.py --scenario IntersectionScenarioZ_4 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 1 --show_int_wp_locs (showing adjusted ego endconditionTrigger loc and ego stopping inbetween i.e. 20 meters before destination, Works 18 March21)
+• python scenario_runnerZ2.py --scenario IntersectionScenarioZ_3b --show_int_wps --show_int_wp_locs (Works! Showing all the ADJUSTED ego endconditionTrigger locs)
+• python scenario_runnerZ11.py --scenario IntersectionScenarioZ_5 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 1 --show_int_wp_locs --debug (Works. New Added nodes in Behavior tree (end ego goal location in parallel with KeepVelocity). 18March21)
+• python scenario_runnerZ12.py --scenario IntersectionScenarioZ_6 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 1 --show_int_wp_locs --debug (Works! Testing other veh auto control agent here, 23March21)
+• python scenario_runnerZ12.py --scenario IntersectionScenarioZ_6 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 1 (Less cluttered version of above command, 23 March21, Works)
+• python scenario_runnerZ12.py --scenario IntersectionScenarioZ_6 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 1 --debug (debug version of above, Works)
+• python scenario_runnerZ13.py --scenario IntersectionScenarioZ_7 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 1 (experimental, 24 March, works)
+• python scenario_runnerZ14.py --scenario IntersectionScenarioZ_7 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 121223 (experimental, 25 March, works)
+• python scenario_runnerZ15.py --scenario IntersectionScenarioZ_7 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 1212 (Works, 26March21)
+
+
+
+	• python scenario_runnerZ13.py --scenario IntersectionScenarioZ_7 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 1 (ego left start goal base, other right start goal base, works, 24March21)
+
+	• python scenario_runnerZ13.py --scenario IntersectionScenarioZ_7 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 121223 (Ego starts left leg and goal to right, Other starts base and goal right leg, works, 24March21)
+
+	• python scenario_runnerZ14.py --scenario IntersectionScenarioZ_7 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 121223  (Randomization different due to randints of env_conditions appearing first above the intersection_sit_gen) 
+	• python scenario_runnerZ15.py --scenario IntersectionScenarioZ_7 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 121223  (Randomization different due to randints of env_conditions appearing first above the intersection_sit_gen) (friction is 0.8) (works fine now)
+
+	• python scenario_runnerZ15.py --scenario IntersectionScenarioZ_7 --show_int_wps --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 1212 (ego base to right, OV left to right, env cond gen first) friction is 0.2 (26March21) 
+
+	
