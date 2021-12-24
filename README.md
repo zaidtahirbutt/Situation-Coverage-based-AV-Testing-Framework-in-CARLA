@@ -11,8 +11,9 @@ Reference for the paper will come here
 '''
 --------------------------------------------------------------------------
 
+## Instruction to run the Situation Covoverage-based AV-Testing Framework
 
-The full steps of getting this framework to run are mentioned below. These instructions are for a windows 10 os, please run equivalent Linux commands or anyother os commands.
+The full steps of getting this framework to run are mentioned below. These instructions are for a windows 10 OS, please run equivalent Linux commands or anyother OS commands (depending upon the OS you have).
 
 
 ## 1) Install Anaconda and create a virtual environment in Anaconda software
