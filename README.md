@@ -1,8 +1,16 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Situation-Coverage-based-AV-Testing-Framework-in-CALRA
+# Intersection focused Situation Coverage-based Verification and Validation Framework for Autonomous Vehicles Implemented in CARLA
 
-Situation Coverage-based (SitCov) Autonomous Vehicle (AV)-Testing Framework in CALRA. This repository contains the files and the steps needed to run the SitCov AV-Testing Framework in Carla. Our SitCov AV-Testing Framework uses CARLA software and Scenario Runner API. 
+The above mentioned framework will be referred to as Situation Coverage-based (SitCov) Autonomous Vehicle (AV)-Testing Framework in CALRA. This repository contains the files and the steps needed to run the SitCov AV-Testing Framework in Carla. Our SitCov AV-Testing Framework uses CARLA software and Scenario Runner API. 
+
+### Cite my paper and this repo as well if you plan to use it. The paper will be online in a few days, I will post its link here " " once it is online.
+
+'''
+Reference for the paper will come here
+'''
+--------------------------------------------------------------------------
+
 
 The full steps of getting this framework to run are mentioned below. These instructions are for a windows 10 os, please run equivalent Linux commands or anyother os commands.
 
@@ -21,6 +29,7 @@ The full steps of getting this framework to run are mentioned below. These instr
 - Set up two folders in your drive. One for Carla and one for Scenario Runner. 
 
 ## 2) Install CARLA 9.10 (This exact version)
+--------------------------------------------------------------------------
 
 - Then go to **Carla 9.10** website here https://carla.readthedocs.io/en/0.9.10/start_quickstart/ and download **Carla 9.10** and follow the guidance on how to run it.
 
@@ -33,18 +42,94 @@ The full steps of getting this framework to run are mentioned below. These instr
      **python spawn_npc.py**
 
 ## 3) Install Scenario Runner 9.10 (This exact version)
+--------------------------------------------------------------------------
 
 - Set up **scenario runner 9.10** for **Carla 9.10** using these links https://github.com/carla-simulator/scenario_runner/tree/0.9.10  and  https://github.com/carla-simulator/scenario_runner/blob/0.9.10/Docs/getting_scenariorunner.md and follow all the instructions provided there to run scenario runner 9.10 with Carla 9.10.
 
 - Go into scenario runner folder and run the following commands (helping tip in Scenario Runner 9.10 installation):
 
      **pip3 install --user -r requirements.txt**
-- To check the **Scenario Runner** installation, run the **CarlaUE4.exe** (**in Carla folder**) and run the following two python scripts in order in the **Scenario Runner folder**:
+     
+- Then set the environment variables as shown in the **scenario runner** docs link provided above.
+The environment variables will take the paths of the Carla installation and Scenario Runner installation.
+     
+     
+- To check the **Scenario Runner** installation, run the **CarlaUE4.exe** (**in Carla folder**) and run the following two python scripts in order in the **Scenario Runner folder** using these commands:
 		
      **python scenario_runner.py --scenario NoSignalJunctionCrossing --reloadWorld**
 		
      **python manual_control.py**
+     
+- **Make sure your Carla 9.10 installation and Scenario Runner 9.10 are working properly before moving to the next steps.**
 
+## 4) Setting up the Situation Coverage-based AV-Testing Framework
+--------------------------------------------------------------------------
+
+### 4a) The first step here is to download the two folders in this repo named **"PythonAPI"** and **scenario_runner-0.9.10**
+### 4b) The second step is to go to your Carla installation folder and replace its **"PythonAPI"** folder with this repo's **"PythonAPI"** folder.
+### 4c) The third step is to go to your Scenario Runner API folder and replace the whole folder with "scenario_runner-0.9.10" folder from this repo. Make sure both folders are named the same (scenario_runner-0.9.1), as the environment variables were set according to this name.
+--------------------------------------------------------------------------
+
+### Now install the following packages using these commands below:
+
+- **pip install xmlschema**
+- **pip install six**
+- **pip install py-trees==0.8.1**
+- **pip install ephem**
+- **pip install networkx**
+- **conda install -c conda-forge shapely**
+- **pip install tabulate**
+- **pip install XlsxWriter==1.4.3**
+
+### The SitCov AV-Testing Framework is using Google Object Detection API which uses DeepLearning Models for object detection using Tensorflow. Install following packages for it using these commands:
+
+- **pip install scipy** 
+
+- Tensorflow 2.4.1 is used for the object detections part. Install it in the virtual environment us this command below:
+
+	**pip install --ignore-installed --upgrade tensorflow==2.4.1**
+	
+- Follow all the steps here https://www.tensorflow.org/install to install all the dependencies of tensorflow.
+
+- Install the following packages as well using these commands:
+
+- **pip install matplotlib**
+
+- **pip install opencv-python**
+
+- **pip install openpyxl==3.0.7**
+
+- **pip install cython**
+
+- **pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI**
+
+- **pip install tf_slim**
+
+- Use following command to set the environment variables path to Models and Object detection Models inside the scenario runner! (considering you have scenario_runner-0.9.10 folder at this location in D: \ )
+
+	**set PYTHONPATH=D:\scenario_runner-0.9.10\models;D:\scenario_runner-0.9.10\models\research;D:\scenario_runner-0.9.10\models\research\slim**
+
+## 5) Running the Situation Coverage-based AV-Testing Framework
+
+- Run the following command inside the "scenario_runner-0.9.10" folder to run the SitCov AV-Testing Framework automatic testsuite generation:
+
+	**python situationcoverage_AV_VV_Framework.py --scenario IntersectionScenarioZ_11  --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 13212 --use_sit_cov --reloadWorld --output**
+
+- For running SitCov AV-Testing automatic test-suite generation for more than one time use the following command (Just type the number infront of repetitions argument for the number of test cases you want generated):
+
+	**python situationcoverage_AV_VV_Framework.py --scenario IntersectionScenarioZ_11  --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 13212 --use_sit_cov --reloadWorld --output --repetitions 3**
+	
+## 6) Additional Directives while using this Situation Coverage-based AV-Testing Framework:
+
+- Zoom out from the map at the start of the simulation towards the North East (drag your mouse to make the view as if a camera was pointing from the sky downwards) and spot where the ego and other vehicle are being generated and then zoom into that place from the top for each simulation run. Ideally I should have set up a camera to automatically show this view upon every simulation run, just need some additional coding for that. 
+
+- Excel Template and Python code for writing SitCov AV-testing framework testsuite results has also been provided 
+
+### 6b) One improvement needs to be done:
+
+- The simulation class objects (each time a sitcov object is generated) aren't being removed after each simulation so the max repitions you can use is 20 using "--repetitions 20" command (this number might be lower or higher depending upon your PC specs but eventually your PC memory will overflow) after which your PC memory will overflow.
+
+-This problem can also be fixed with a simple class object delete command after each simulation. But for now you can keep doing simulation runs for 20 reps and then change the random number seed for the next 20 runs and so on.
 
 License
 -------
