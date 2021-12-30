@@ -4,10 +4,20 @@
 
 The above mentioned framework will be referred to as Situation Coverage-based (SitCov) Autonomous Vehicle (AV)-Testing Framework in CALRA. This repository contains the files and the steps needed to run the SitCov AV-Testing Framework in Carla. Our SitCov AV-Testing Framework uses CARLA software and Scenario Runner API. 
 
-### Cite my paper and this repo as well if you plan to use it. The paper will be online in a few days, I will post its link here " " once it is online.
+### Cite my paper and this repo as well if you plan to use it. 
+Here is the link to the paper
+https://arxiv.org/abs/2112.14706
 
 '''
-Reference for the paper will come here
+Reference for my paper:
+
+Zaid Tahir and Rob Alexander. Intersection focused situation coverage-based verification
+and validation framework for autonomous vehicles implemented in carla, arxiv, 2021.
+
+Z. Tahir and R. Alexander, “Intersection focused Situation Coverage-based Verification and Validation Framework for Autonomous Vehicles Implemented in CARLA”, Modelling & Simulation for Autonomous Systems conference (MESAS) 2021 (submitted).
+
+
+
 '''
 --------------------------------------------------------------------------
 
