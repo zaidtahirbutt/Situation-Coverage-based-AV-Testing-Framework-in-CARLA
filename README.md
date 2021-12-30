@@ -4,7 +4,6 @@
 
 ![image](https://user-images.githubusercontent.com/25262332/147320344-826c573b-4016-4d0a-b0fa-434f76c82040.png)
 
-![image](https://user-images.githubusercontent.com/25262332/147320549-7879bf04-f834-4492-8383-4448e11de4bc.png)
 
 
 The above mentioned framework will be referred to as Situation Coverage-based (SitCov) Autonomous Vehicle (AV)-Testing Framework in CALRA. This repository contains the files and the steps needed to run the SitCov AV-Testing Framework in Carla. Our SitCov AV-Testing Framework uses CARLA software and Scenario Runner API. 
@@ -151,7 +150,7 @@ The environment variables will take the paths of the Carla installation and Scen
 
 - Below are a few screenshots of the SitCov AV-Testing Framework automatic testsuit generation. 
 
-
+![image](https://user-images.githubusercontent.com/25262332/147320549-7879bf04-f834-4492-8383-4448e11de4bc.png)
 ![image](https://user-images.githubusercontent.com/25262332/147320561-9128d665-f8e3-4b25-b99f-bd57b12b20ec.png)
 
 
