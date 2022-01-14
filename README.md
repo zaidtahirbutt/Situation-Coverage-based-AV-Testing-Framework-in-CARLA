@@ -130,19 +130,19 @@ The environment variables will take the paths of the Carla installation and Scen
 
 - Run the following command inside the "scenario_runner-0.9.10" folder to run the SitCov AV-Testing Framework automatic testsuite generation:
 
-	**python situationcoverage_AV_VV_Framework.py --scenario IntersectionScenarioZ_11  --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 13212 --use_sit_cov --reloadWorld --output**
+	### **python situationcoverage_AV_VV_Framework.py --scenario IntersectionScenarioZ_11  --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 13212 --use_sit_cov --reloadWorld --output**
 	
-	### -- Please change the random number generation integer after the argument "--IntersectionScenario_Seed" (it is 13212 in the command displayed above), 	for a different starting random seed so you get a different "set" of results.
+	** -- Please change the random number generation integer after the argument "--IntersectionScenario_Seed" (it is 13212 in the command displayed above), 	for a different starting random seed so you get a different "set" of results.
 	
-	### -- Please remove the argument "--use_sit_cov" if you want to generate situations RANDOMLY instead of SITUATION-COVERAGE-BASED GENERATION.
+	** -- Please remove the argument "--use_sit_cov" if you want to generate situations RANDOMLY instead of SITUATION-COVERAGE-BASED GENERATION.
 
 - For running SitCov AV-Testing automatic test-suite generation for more than one time use the following command (Just type the number infront of repetitions argument for the number of test cases you want generated):
 
-	**python situationcoverage_AV_VV_Framework.py --scenario IntersectionScenarioZ_11  --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 13212 --use_sit_cov --reloadWorld --output --repetitions 3**
+	### **python situationcoverage_AV_VV_Framework.py --scenario IntersectionScenarioZ_11  --not_visualize --Activate_IntersectionScenario_Seed --IntersectionScenario_Seed 13212 --use_sit_cov --reloadWorld --output --repetitions 3**
 	
-	### -- Please change the random number generation integer after the argument "--IntersectionScenario_Seed" (it is 13212 in the command displayed above), 	for a different starting random seed so you get a different "set" of results.
+	** -- Please change the random number generation integer after the argument "--IntersectionScenario_Seed" (it is 13212 in the command displayed above), 	for a different starting random seed so you get a different "set" of results.
 	
-	### -- Please remove the argument "--use_sit_cov" if you want to generate situations RANDOMLY instead of SITUATION-COVERAGE-BASED GENERATION.
+	** -- Please remove the argument "--use_sit_cov" if you want to generate situations RANDOMLY instead of SITUATION-COVERAGE-BASED GENERATION.
 	
 ## 6) Additional Directives while using this Situation Coverage-based AV-Testing Framework:
 
