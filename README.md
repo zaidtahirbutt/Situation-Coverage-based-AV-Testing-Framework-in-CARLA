@@ -8,23 +8,46 @@
 
 
 
+As seen in the video below, the SitCov V&V framework has generated a sunny and clear situation to test the AV with the adversereal vehicle coming in form the top of the intersection and AV from the left. The Deeplearning vision-only-based collision avoidance-control of the AV stops it in time. The camera feed of the AV can be seen on the top right. 
+
+https://user-images.githubusercontent.com/25262332/166877997-05aae717-a718-49b0-af80-220c87183a70.mp4
+
+
+
+In the second video below, the SitCov V&V framework has generated a rainy and foggy situation to test the AV with the adversereal vehicle coming in form the top of the intersection and AV from the right. The Deeplearning vision-only-based collision-avoidance control of the AV doesn't detect the hazard in time due to its vision being occluded by the rain and the fog and collision happens. The camera feed of the AV can be seen on the top right. 
+
+https://user-images.githubusercontent.com/25262332/166877051-95ba479d-0ae4-45f7-a9f9-2847be5fc1b1.mp4
+
+
+
+
+
 The above mentioned framework will be referred to as Situation Coverage-based (SitCov) Autonomous Vehicle (AV)-Testing Framework in CALRA. This repository contains the files and the steps needed to run the SitCov AV-Testing Framework in Carla. Our SitCov AV-Testing Framework uses CARLA software and Scenario Runner API. 
 
 ### Cite my paper and this repo as well if you plan to use this. 
 Here is the link to the paper
-https://arxiv.org/abs/2112.14706
+
+https://doi.org/10.48550/arXiv.2112.14706 (arxiv)
+
+https://doi.org/10.1007/978-3-030-98260-7_12 (Journal)
 
 '''
 ## Reference for my paper:
 
-Zaid Tahir and Rob Alexander. Intersection focused situation coverage-based verification
-and validation framework for autonomous vehicles implemented in carla, arxiv, 2021.
+Z. Tahir and R. Alexander, “Intersection focused Situation Coverage-based Verification and Validation Framework for Autonomous Vehicles Implemented in CARLA”, Modelling & Simulation for Autonomous Systems conference (MESAS) 2021, https://doi.org/10.1007/978-3-030-98260-7_12.
 
-Z. Tahir and R. Alexander, “Intersection focused Situation Coverage-based Verification and Validation Framework for Autonomous Vehicles Implemented in CARLA”, Modelling & Simulation for Autonomous Systems conference (MESAS) 2021 (submitted).
-
+'''
 
 
 '''
+
+Follow me on Linkedin: https://www.linkedin.com/in/zaidtb/
+
+Follow me on twitter: https://twitter.com/Zaid_TB
+
+'''
+
+
 --------------------------------------------------------------------------
 
 ## Instruction to run the Situation Covoverage-based AV-Testing Framework
