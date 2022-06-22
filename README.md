@@ -32,9 +32,9 @@ https://doi.org/10.48550/arXiv.2112.14706 (arxiv)
 https://doi.org/10.1007/978-3-030-98260-7_12 (Journal)
 
 '''
-## Reference for my paper:
+## Reference Citation for my paper:
 
-Z. Tahir and R. Alexander, “Intersection focused Situation Coverage-based Verification and Validation Framework for Autonomous Vehicles Implemented in CARLA”, Modelling & Simulation for Autonomous Systems conference (MESAS) 2021, https://doi.org/10.1007/978-3-030-98260-7_12.
+Tahir, Z., Alexander, R. (2022). Intersection Focused Situation Coverage-Based Verification and Validation Framework for Autonomous Vehicles Implemented in CARLA. In: , et al. Modelling and Simulation for Autonomous Systems. MESAS 2021. Lecture Notes in Computer Science, vol 13207. Springer, Cham. https://doi.org/10.1007/978-3-030-98260-7_12
 
 '''
 
