@@ -96,9 +96,9 @@ The environment variables will take the paths of the Carla installation and Scen
      
 - To check the **Scenario Runner** installation, run the **CarlaUE4.exe** (**in Carla folder**) and run the following two python scripts in order in the **Scenario Runner folder** using these commands:
 		
-     **python scenario_runner.py --scenario NoSignalJunctionCrossing --reloadWorld**
+     **python scenario_runner.py --scenario NoSignalJunctionCrossing --reloadWorld --output**
 		
-     **python manual_control.py**
+     **python manual_control.py --autopilot**
      
 - **Make sure your Carla 9.10 installation and Scenario Runner 9.10 are working properly before moving to the next steps.**
 
@@ -141,7 +141,7 @@ The environment variables will take the paths of the Carla installation and Scen
 
 - **pip install cython**
 
-- **pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI**
+- **pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI** (visual studio need to be installed before in the working pc)
 
 - **pip install tf_slim**
 
