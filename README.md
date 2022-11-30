@@ -71,7 +71,7 @@ The full steps of getting this framework to run are mentioned below. These instr
 ## 2) Install CARLA 9.10 (This exact version)
 --------------------------------------------------------------------------
 
-- Then go to **Carla 9.10** website here https://carla.readthedocs.io/en/0.9.10/start_quickstart/ and download **Carla 9.10** and follow the guidance on how to run it.
+- Then go to **Carla 9.10** website here https://carla.readthedocs.io/en/0.9.10/start_quickstart/ and download **Carla 9.10** and follow the guidance on how to run it. If DirectXRunTime error occurs, download Carla9.4 and run CarlaEU4.exe and get the option to fix this error and install EU4 prerequisites first.
 
 - One of the requirements mentioned on the page is to run this command:
 
@@ -100,7 +100,7 @@ The environment variables will take the paths of the Carla installation and Scen
 		
      **python manual_control.py --autopilot**
      
-- **Make sure your Carla 9.10 installation and Scenario Runner 9.10 are working properly before moving to the next steps.**
+- **Make sure your Carla 9.10 installation and Scenario Runner 9.10 are working properly before moving to the next steps.**Need to run scenario and manual control in different terminal at the same time. 
 
 ## 4) Setting up the Situation Coverage-based AV-Testing Framework
 --------------------------------------------------------------------------
